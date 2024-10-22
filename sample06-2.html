@@ -5,23 +5,26 @@
   </head>
   <script  src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
-function showNasa()
+function showyourid()
 {
+  var name = document.getElementById('you').value;
+
   twttr.widgets.createTimeline(
       {
         sourceType: "profile",
-        screenName: "nasa"
+        screenName: name
       },
-      document.getElementById("nasaSpace")
+      document.getElementById("yourid")
   );
 }
   </script>
 
   <body>
+<input type="text" id="you">
+<button type="button" onclick='showyourid()'>検索</button>
 
-<button type="button" name="NASA" onclick='showNasa()'>NASA</button>
+<div id='yourid'></div>
 
-<div id='nasaSpace'></div>
 
   </body>
 </html>
